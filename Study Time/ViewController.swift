@@ -7,20 +7,30 @@
 //
 
 import UIKit
+import  AVFoundation
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
+      @IBOutlet weak var myImageView: UIImageView!
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        goalName.delegate = self
+        
+       
+    }
+    
 
     var goal = ""
-    
-    
-    
+  
     // Goal Is On\OFF
     var oneIsOn = false
     var twoIsOn = false
     var threeIsOn = false
     var fourIsOn = false
     var fiveIsOn = false
+    var sixIsOn = false
+    var sevenIsOn = false
+    
     
     // Goal Views
     @IBOutlet weak var goalOneView: UIView!
@@ -28,6 +38,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var goalThreeView: UIView!
     @IBOutlet weak var goalFourView: UIView!
     @IBOutlet weak var goalFiveView: UIView!
+    @IBOutlet weak var goalSixView: UIView!
+    @IBOutlet weak var goalSevenView: UIView!
     
     //Goal Labels
     @IBOutlet weak var goalOneLabel: UILabel!
@@ -35,7 +47,45 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var goalThreeLabel: UILabel!
     @IBOutlet weak var goalFourLabel: UILabel!
     @IBOutlet weak var goalFiveLabel: UILabel!
+    @IBOutlet weak var goalSixLabel: UILabel!
+    @IBOutlet weak var goalSevenLabel: UILabel!
     
+    //Close Timer - Buttons Outlet
+    
+    @IBOutlet weak var closeGoalOneButton: UIButton!
+    @IBOutlet weak var closeGoalTwoButton: UIButton!
+    @IBOutlet weak var closeGoalThreeButton: UIButton!
+    @IBOutlet weak var closeGoalFourButton: UIButton!
+    @IBOutlet weak var closeGoalFiveButton: UIButton!
+    @IBOutlet weak var closeGoalSixButton: UIButton!
+    @IBOutlet weak var closeGoalSevenButton: UIButton!
+
+    //Close Timer = Button Actions
+    
+    @IBAction func closeGoalOne(_ sender: Any) {
+        goalOneView.isHidden = true
+    }
+    @IBAction func closeGoalTwo(_ sender: Any) {
+        goalTwoView.isHidden = true
+    }
+    @IBAction func closeGoalThree(_ sender: Any) {
+        goalThreeView.isHidden = true
+    }
+    @IBAction func closeGoalFour(_ sender: Any) {
+        goalFourView.isHidden = true
+    }
+    @IBAction func closeGoalFive(_ sender: Any) {
+        goalFiveView.isHidden = true
+    }
+    
+    @IBAction func closeGoalSix(_ sender: Any) {
+        goalSixView.isHidden = true
+    }
+    @IBAction func closeGoalSeven(_ sender: Any) {
+        goalSevenView.isHidden = true
+    }
+    
+ 
     //Goal Time Labels
     
     @IBOutlet weak var goalOneTimeLabel: UILabel!
@@ -43,7 +93,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var goalThreeTimeLabel: UILabel!
     @IBOutlet weak var goalFourTimeLabel: UILabel!
     @IBOutlet weak var goalFiveTimeLabel: UILabel!
-
+    @IBOutlet weak var goalSixTimeLabel: UILabel!
+    @IBOutlet weak var goalSevenTimeLabel: UILabel!
+    
+    
     @IBAction func testing(_ sender: Any) {
         print("\(countDownTimer.countDownDuration)")
     }
@@ -73,8 +126,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
             goalFiveTime = Double(seconds)
             goalFiveTimeLabel.text = "\(timeString(time: TimeInterval(seconds)))"
             fiveIsOn = false
+        }else if sixIsOn == true {
+            goalSixTime = Double(seconds)
+            goalSixTimeLabel.text = "\(timeString(time: TimeInterval(seconds)))"
+            sixIsOn = false
+        }else if sevenIsOn == true {
+            goalSevenTime = Double(seconds)
+            goalSevenTimeLabel.text = "\(timeString(time: TimeInterval(seconds)))"
+            sevenIsOn = false
         }
-        print("\(goalOneTime)")
         ViewTimerRunning.isHidden = true
         timer.invalidate()
     }
@@ -82,6 +142,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     
     // Start Study Timer
+    
     @IBAction func startOne(_ sender: Any) {
         ViewTimerRunning.isHidden = false
         labelOfGoalRunning.text = goalOneLabel.text
@@ -127,6 +188,26 @@ class ViewController: UIViewController, UITextFieldDelegate {
         runTimer()
         fiveIsOn = true
     }
+    
+    @IBAction func startSix(_ sender: Any) {
+        ViewTimerRunning.isHidden = false
+        labelOfGoalRunning.text = goalSixLabel.text
+        seconds = Int(goalSixTime)
+        countDownTimer.countDownDuration = goalSixTime
+        timerLabel.text = timeString(time: TimeInterval(goalSixTime))
+        runTimer()
+        sixIsOn = true
+    }
+    @IBAction func startSeven(_ sender: Any) {
+        ViewTimerRunning.isHidden = false
+        labelOfGoalRunning.text = goalSevenLabel.text
+        seconds = Int(goalSevenTime)
+        countDownTimer.countDownDuration = goalSevenTime
+        timerLabel.text = timeString(time: TimeInterval(goalSevenTime))
+        runTimer()
+        sevenIsOn = true
+    }
+ 
 
     // View of Timer Running
     
@@ -181,6 +262,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     // Add Goals
     @IBAction func addGoal(_ sender: Any) {
+
         goal = goalName.text!
         //runTimer()
         seconds = Int(countDownTimer.countDownDuration)
@@ -219,8 +301,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
             goalFiveTimeLabel.text = "\(timeString(time: TimeInterval(seconds)))"
             goalName.text = ""
             goalFiveTime = countDownTimer.countDownDuration
+        } else if goalSixView.isHidden {
+            goalSixView.isHidden = false
+            goalSixLabel.text = "\(goal)"
+            goalSixTimeLabel.text = "\(timeString(time: TimeInterval(seconds)))"
+            goalName.text = ""
+            goalSixTime = countDownTimer.countDownDuration
+        } else if goalSevenView.isHidden {
+            goalSevenView.isHidden = false
+            goalSevenLabel.text = "\(goal)"
+            goalSevenTimeLabel.text = "\(timeString(time: TimeInterval(seconds)))"
+            goalName.text = ""
+            goalSevenTime = countDownTimer.countDownDuration
         }
-    
+ 
        print("\(countDownTimer.countDownDuration)")
        print("\(goalOneTime)")
        
@@ -240,12 +334,38 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     
    
+   
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        goalName.delegate = self
+    
+    
+    //testing getting music names
+    
+    /*func gettingSongName() {
         
+        let folderUrl = URL(fileURLWithPath: Bundle.main.resourcePath!)
+        
+        do
+        {
+            let songPath = try FileManager.default.contentsOfDirectory(at: folderUrl, includingPropertiesForKeys: nil, options: .skipsHiddenFiles)
+            
+            for song in songPath {
+                var mySong = song.absoluteString
+                if mySong.contains(".mp3") {
+                    print (mySong)
+                }
+            }
+        } catch {
+            
+        }
     }
+    
+    */
+    
+    
+    
+    
+    
+    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard let text = goalName.text else { return true }
         let newLength = text.count + string.count - range.length
