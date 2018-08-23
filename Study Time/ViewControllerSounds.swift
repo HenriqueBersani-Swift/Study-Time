@@ -24,7 +24,7 @@ class ViewControllerSounds: UIViewController, UITableViewDelegate, UITableViewDa
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
-        cell.backgroundColor = UIColor.black.withAlphaComponent(0.3)
+        cell.backgroundColor = UIColor.darkGray.withAlphaComponent(0.6)
         cell.textLabel?.text = songs[indexPath.row]
         return cell
     }
@@ -40,6 +40,7 @@ class ViewControllerSounds: UIViewController, UITableViewDelegate, UITableViewDa
             audioStuffed = true
             musicLabel.text = songs[thisSong]
             pauseOutlet.isHidden = false
+            playOutlet.isHidden = true
         }catch{
             print("ERROR")
         }
@@ -68,6 +69,7 @@ class ViewControllerSounds: UIViewController, UITableViewDelegate, UITableViewDa
         if audioStuffed == true && audioPlayer.isPlaying == false {
             audioPlayer.play()
             pauseOutlet.isHidden = false
+            playOutlet.isHidden = true
         } else {
             
         }

@@ -15,7 +15,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         goalName.delegate = self
-        
+        countDownTimer.setValue(UIColor.white, forKey: "textColor")
+   
        
     }
     
