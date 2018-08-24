@@ -7,7 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6A1AACD5212E644400EED212 /* 243019__davestalker__flock-of-birds-in-hedge2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6A1AACD4212E644200EED212 /* 243019__davestalker__flock-of-birds-in-hedge2.mp3 */; };
+		6A1AACDB212F6A6500EED212 /* Jet - White Noise.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6A1AACDA212F6A6500EED212 /* Jet - White Noise.wav */; };
+		6A1AACE7212F722300EED212 /* Jungle Night.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6A1AACDC212F71F900EED212 /* Jungle Night.wav */; };
+		6A1AACE8212F722300EED212 /* Mysterious.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6A1AACDD212F71FF00EED212 /* Mysterious.wav */; };
+		6A1AACE9212F722300EED212 /* Paris Museum.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6A1AACDE212F720200EED212 /* Paris Museum.wav */; };
+		6A1AACEC212F722300EED212 /* Forest.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6A1AACE1212F720B00EED212 /* Forest.wav */; };
+		6A1AACED212F722300EED212 /* College Class.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6A1AACE2212F721500EED212 /* College Class.wav */; };
+		6A1AACEE212F722300EED212 /* Quenacho.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6A1AACE3212F721700EED212 /* Quenacho.wav */; };
+		6A1AACF0212F722300EED212 /* Pirate Ship.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6A1AACE5212F722000EED212 /* Pirate Ship.wav */; };
+		6A1AACF1212F722300EED212 /* Dark Thrill.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6A1AACE6212F722300EED212 /* Dark Thrill.wav */; };
+		6A1AACF3212F7B9200EED212 /* Fireplace.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6A1AACF2212F7B9200EED212 /* Fireplace.wav */; };
+		6A1AACF5212F7E3600EED212 /* Hawaii Beach.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6A1AACF4212F7E3600EED212 /* Hawaii Beach.wav */; };
 		6AF0AA61211E297A00A6C502 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF0AA60211E297A00A6C502 /* AppDelegate.swift */; };
 		6AF0AA63211E297A00A6C502 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF0AA62211E297A00A6C502 /* ViewController.swift */; };
 		6AF0AA66211E297A00A6C502 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AF0AA64211E297A00A6C502 /* Main.storyboard */; };
@@ -15,12 +25,20 @@
 		6AF0AA6B211E298400A6C502 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AF0AA6A211E298400A6C502 /* Assets.xcassets */; };
 		6AF0AA6E211E298400A6C502 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AF0AA6C211E298400A6C502 /* LaunchScreen.storyboard */; };
 		6AF0AA7E2129FA5C00A6C502 /* ViewControllerSounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF0AA7D2129FA5C00A6C502 /* ViewControllerSounds.swift */; };
-		6AF0AAA5212A616900A6C502 /* song.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6AF0AAA3212A616900A6C502 /* song.mp3 */; };
-		6AF0AAA6212A616900A6C502 /* songlabamaa florida.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6AF0AAA4212A616900A6C502 /* songlabamaa florida.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6A1AACD4212E644200EED212 /* 243019__davestalker__flock-of-birds-in-hedge2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "243019__davestalker__flock-of-birds-in-hedge2.mp3"; sourceTree = "<group>"; };
+		6A1AACDA212F6A6500EED212 /* Jet - White Noise.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Jet - White Noise.wav"; sourceTree = "<group>"; };
+		6A1AACDC212F71F900EED212 /* Jungle Night.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Jungle Night.wav"; sourceTree = "<group>"; };
+		6A1AACDD212F71FF00EED212 /* Mysterious.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Mysterious.wav; sourceTree = "<group>"; };
+		6A1AACDE212F720200EED212 /* Paris Museum.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Paris Museum.wav"; sourceTree = "<group>"; };
+		6A1AACE1212F720B00EED212 /* Forest.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Forest.wav; sourceTree = "<group>"; };
+		6A1AACE2212F721500EED212 /* College Class.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "College Class.wav"; sourceTree = "<group>"; };
+		6A1AACE3212F721700EED212 /* Quenacho.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Quenacho.wav; sourceTree = "<group>"; };
+		6A1AACE5212F722000EED212 /* Pirate Ship.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Pirate Ship.wav"; sourceTree = "<group>"; };
+		6A1AACE6212F722300EED212 /* Dark Thrill.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Dark Thrill.wav"; sourceTree = "<group>"; };
+		6A1AACF2212F7B9200EED212 /* Fireplace.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Fireplace.wav; sourceTree = "<group>"; };
+		6A1AACF4212F7E3600EED212 /* Hawaii Beach.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Hawaii Beach.wav"; sourceTree = "<group>"; };
 		6AF0AA5D211E297A00A6C502 /* Study Time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Study Time.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AF0AA60211E297A00A6C502 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AF0AA62211E297A00A6C502 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,8 +48,6 @@
 		6AF0AA6D211E298400A6C502 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6AF0AA6F211E298400A6C502 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6AF0AA7D2129FA5C00A6C502 /* ViewControllerSounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerSounds.swift; sourceTree = "<group>"; };
-		6AF0AAA3212A616900A6C502 /* song.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = song.mp3; sourceTree = "<group>"; };
-		6AF0AAA4212A616900A6C502 /* songlabamaa florida.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "songlabamaa florida.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,9 +96,17 @@
 		6AF0AAA2212A616900A6C502 /* Songs */ = {
 			isa = PBXGroup;
 			children = (
-				6AF0AAA3212A616900A6C502 /* song.mp3 */,
-				6A1AACD4212E644200EED212 /* 243019__davestalker__flock-of-birds-in-hedge2.mp3 */,
-				6AF0AAA4212A616900A6C502 /* songlabamaa florida.mp3 */,
+				6A1AACDA212F6A6500EED212 /* Jet - White Noise.wav */,
+				6A1AACE6212F722300EED212 /* Dark Thrill.wav */,
+				6A1AACDD212F71FF00EED212 /* Mysterious.wav */,
+				6A1AACE1212F720B00EED212 /* Forest.wav */,
+				6A1AACE2212F721500EED212 /* College Class.wav */,
+				6A1AACF4212F7E3600EED212 /* Hawaii Beach.wav */,
+				6A1AACDC212F71F900EED212 /* Jungle Night.wav */,
+				6A1AACF2212F7B9200EED212 /* Fireplace.wav */,
+				6A1AACDE212F720200EED212 /* Paris Museum.wav */,
+				6A1AACE5212F722000EED212 /* Pirate Ship.wav */,
+				6A1AACE3212F721700EED212 /* Quenacho.wav */,
 			);
 			path = Songs;
 			sourceTree = "<group>";
@@ -147,10 +171,18 @@
 			files = (
 				6AF0AA6E211E298400A6C502 /* LaunchScreen.storyboard in Resources */,
 				6AF0AA6B211E298400A6C502 /* Assets.xcassets in Resources */,
-				6AF0AAA6212A616900A6C502 /* songlabamaa florida.mp3 in Resources */,
+				6A1AACDB212F6A6500EED212 /* Jet - White Noise.wav in Resources */,
+				6A1AACF5212F7E3600EED212 /* Hawaii Beach.wav in Resources */,
+				6A1AACE8212F722300EED212 /* Mysterious.wav in Resources */,
 				6AF0AA66211E297A00A6C502 /* Main.storyboard in Resources */,
-				6A1AACD5212E644400EED212 /* 243019__davestalker__flock-of-birds-in-hedge2.mp3 in Resources */,
-				6AF0AAA5212A616900A6C502 /* song.mp3 in Resources */,
+				6A1AACEE212F722300EED212 /* Quenacho.wav in Resources */,
+				6A1AACF1212F722300EED212 /* Dark Thrill.wav in Resources */,
+				6A1AACF0212F722300EED212 /* Pirate Ship.wav in Resources */,
+				6A1AACF3212F7B9200EED212 /* Fireplace.wav in Resources */,
+				6A1AACE7212F722300EED212 /* Jungle Night.wav in Resources */,
+				6A1AACED212F722300EED212 /* College Class.wav in Resources */,
+				6A1AACEC212F722300EED212 /* Forest.wav in Resources */,
+				6A1AACE9212F722300EED212 /* Paris Museum.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

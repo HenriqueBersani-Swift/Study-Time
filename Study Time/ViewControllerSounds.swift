@@ -18,13 +18,14 @@ class ViewControllerSounds: UIViewController, UITableViewDelegate, UITableViewDa
     
     @IBOutlet weak var myTableView: UITableView!
     
+    @IBOutlet weak var soundsBackgroundImg: UIImageView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return songs.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
-        cell.backgroundColor = UIColor.darkGray.withAlphaComponent(0.6)
+        cell.backgroundColor = UIColor.darkGray.withAlphaComponent(0.75)
         cell.textLabel?.text = songs[indexPath.row]
         return cell
     }
@@ -32,7 +33,7 @@ class ViewControllerSounds: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         do {
-            let audioPath = Bundle.main.path(forResource: songs[indexPath.row], ofType: ".mp3")
+            let audioPath = Bundle.main.path(forResource: songs[indexPath.row], ofType: ".wav")
             try audioPlayer = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
             audioPlayer.play()
             audioPlayer.numberOfLoops = -1
@@ -41,6 +42,39 @@ class ViewControllerSounds: UIViewController, UITableViewDelegate, UITableViewDa
             musicLabel.text = songs[thisSong]
             pauseOutlet.isHidden = false
             playOutlet.isHidden = true
+            
+            switch musicLabel.text {
+            case "Forest":
+                soundsBackgroundImg.image = #imageLiteral(resourceName: "Forest")
+            case "Dark Thrill":
+                soundsBackgroundImg.image = #imageLiteral(resourceName: "darkThrill")
+            case "Fireplace":
+                soundsBackgroundImg.image = #imageLiteral(resourceName: "fireplace")
+            case "Hawaii Beach":
+                soundsBackgroundImg.image = #imageLiteral(resourceName: "beach")
+            case "College Class":
+                soundsBackgroundImg.image = #imageLiteral(resourceName: "CollegeClass")
+            case "Jet - White Noise":
+                soundsBackgroundImg.image = #imageLiteral(resourceName: "jet")
+            case "Jungle Night":
+                soundsBackgroundImg.image = #imageLiteral(resourceName: "jungleNight")
+            case "Mysterious":
+                soundsBackgroundImg.image = #imageLiteral(resourceName: "Mysterious")
+            case "Paris Museum":
+                soundsBackgroundImg.image = #imageLiteral(resourceName: "parisMuseum")
+            case "Pirate Ship":
+                soundsBackgroundImg.image = #imageLiteral(resourceName: "pirateShip")
+            case "Quenacho":
+                soundsBackgroundImg.image = #imageLiteral(resourceName: "quenacho")
+            case "Zen":
+                soundsBackgroundImg.image = #imageLiteral(resourceName: "zen")
+          
+                
+            default:
+                print("none")
+            }
+            
+            
         }catch{
             print("ERROR")
         }
@@ -115,7 +149,7 @@ class ViewControllerSounds: UIViewController, UITableViewDelegate, UITableViewDa
     
     func playThis(thisOne: String){
         do {
-            let audioPath = Bundle.main.path(forResource: thisOne, ofType: ".mp3")
+            let audioPath = Bundle.main.path(forResource: thisOne, ofType: ".wav")
             try audioPlayer = AVAudioPlayer(contentsOf: NSURL(fileURLWithPath: audioPath!) as URL)
             audioPlayer.play()
             
@@ -145,12 +179,12 @@ class ViewControllerSounds: UIViewController, UITableViewDelegate, UITableViewDa
             for song in songPath {
                 var mySong = song.absoluteString
                 
-                if mySong.contains(".mp3")
+                if mySong.contains(".wav")
                 {
                let findString = mySong.components(separatedBy: "/")
                    mySong = findString[findString.count-1]
                    mySong = mySong.replacingOccurrences(of: "%20", with: " ")
-                   mySong =   mySong.replacingOccurrences(of: ".mp3", with: "")
+                   mySong =   mySong.replacingOccurrences(of: ".wav", with: "")
                   songs.append(mySong)
                 }
             }
