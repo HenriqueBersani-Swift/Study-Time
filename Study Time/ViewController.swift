@@ -17,13 +17,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
         goalName.delegate = self
         countDownTimer.setValue(UIColor.white, forKey: "textColor")
    
-       
+        
     }
     
 
     var goal = ""
   
-    // Goal Is On\OFF
+    // Goal Is On\OFF (Currently running)
     var oneIsOn = false
     var twoIsOn = false
     var threeIsOn = false
@@ -51,6 +51,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var goalSixLabel: UILabel!
     @IBOutlet weak var goalSevenLabel: UILabel!
     
+    // Start Buttons
+    
+    @IBOutlet weak var oneStartBtn: UIButton!
+    @IBOutlet weak var twoStartBtn: UIButton!
+    @IBOutlet weak var threeStartBtn: UIButton!
+    @IBOutlet weak var fourStartBtn: UIButton!
+    @IBOutlet weak var fiveStartbtn: UIButton!
+    @IBOutlet weak var sixStartBtn: UIButton!
+    @IBOutlet weak var sevenStartBtn: UIButton!
+ 
     //Close Timer - Buttons Outlet
     
     @IBOutlet weak var closeGoalOneButton: UIButton!
@@ -111,30 +121,51 @@ class ViewController: UIViewController, UITextFieldDelegate {
             goalOneTime = Double(seconds)
             goalOneTimeLabel.text = "\(timeString(time: TimeInterval(seconds)))"
             oneIsOn = false
+            if goalOneTime < 1 {
+                oneStartBtn.isHidden = true
+            }
         } else if twoIsOn == true {
                 goalTwoTime = Double(seconds)
                 goalTwoTimeLabel.text = "\(timeString(time: TimeInterval(seconds)))"
                 twoIsOn = false
+            if goalTwoTime < 1 {
+                twoStartBtn.isHidden = true
+            }
         }else if threeIsOn == true {
             goalThreeTime = Double(seconds)
             goalThreeTimeLabel.text = "\(timeString(time: TimeInterval(seconds)))"
             threeIsOn = false
+            if goalThreeTime < 1 {
+                threeStartBtn.isHidden = true
+            }
         }else if fourIsOn == true {
             goalFourTime = Double(seconds)
             goalFourTimeLabel.text = "\(timeString(time: TimeInterval(seconds)))"
             fourIsOn = false
+            if goalFourTime < 1 {
+                fourStartBtn.isHidden = true
+            }
         }else if fiveIsOn == true {
             goalFiveTime = Double(seconds)
             goalFiveTimeLabel.text = "\(timeString(time: TimeInterval(seconds)))"
             fiveIsOn = false
+            if goalFiveTime < 1 {
+                fiveStartbtn.isHidden = true
+            }
         }else if sixIsOn == true {
             goalSixTime = Double(seconds)
             goalSixTimeLabel.text = "\(timeString(time: TimeInterval(seconds)))"
             sixIsOn = false
+            if goalSixTime < 1 {
+                sixStartBtn.isHidden = true
+            }
         }else if sevenIsOn == true {
             goalSevenTime = Double(seconds)
             goalSevenTimeLabel.text = "\(timeString(time: TimeInterval(seconds)))"
             sevenIsOn = false
+            if goalSevenTime < 1 {
+                sevenStartBtn.isHidden = true
+            }
         }
         ViewTimerRunning.isHidden = true
         timer.invalidate()
@@ -152,6 +183,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         timerLabel.text = timeString(time: TimeInterval(goalOneTime))
         runTimer()
         oneIsOn = true
+        
     }
     @IBAction func startTwo(_ sender: Any) {
         ViewTimerRunning.isHidden = false
@@ -257,7 +289,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let minutes = Int(time) / 60 % 60
         let seconds = Int(time) % 60
         
-        return String("\(hours) : \(minutes) : \(seconds)")
+        return String(format:"%0.2d:%0.2d:%0.2d", hours , minutes , seconds )
     }
     
     
@@ -274,46 +306,49 @@ class ViewController: UIViewController, UITextFieldDelegate {
             goalOneTimeLabel.text = "\(timeString(time: TimeInterval(seconds)))"
             goalName.text = ""
             goalOneTime = countDownTimer.countDownDuration
-        
+            oneStartBtn.isHidden = false
         } else if goalTwoView.isHidden {
             goalTwoView.isHidden = false
             goalTwoLabel.text = "\(goal)"
             goalTwoTimeLabel.text = "\(timeString(time: TimeInterval(seconds)))"
             goalName.text = ""
             goalTwoTime = countDownTimer.countDownDuration
-            
+            twoStartBtn.isHidden = false
         } else if goalThreeView.isHidden {
             goalThreeView.isHidden = false
             goalThreeLabel.text = "\(goal)"
             goalThreeTimeLabel.text = "\(timeString(time: TimeInterval(seconds)))"
             goalName.text = ""
             goalThreeTime = countDownTimer.countDownDuration
-            
+            threeStartBtn.isHidden = false
         } else if goalFourView.isHidden {
             goalFourView.isHidden = false
             goalFourLabel.text = "\(goal)"
             goalFourTimeLabel.text = "\(timeString(time: TimeInterval(seconds)))"
             goalName.text = ""
             goalFourTime = countDownTimer.countDownDuration
-            
+            fourStartBtn.isHidden = false
         } else if goalFiveView.isHidden {
             goalFiveView.isHidden = false
             goalFiveLabel.text = "\(goal)"
             goalFiveTimeLabel.text = "\(timeString(time: TimeInterval(seconds)))"
             goalName.text = ""
             goalFiveTime = countDownTimer.countDownDuration
+            fiveStartbtn.isHidden = false
         } else if goalSixView.isHidden {
             goalSixView.isHidden = false
             goalSixLabel.text = "\(goal)"
             goalSixTimeLabel.text = "\(timeString(time: TimeInterval(seconds)))"
             goalName.text = ""
             goalSixTime = countDownTimer.countDownDuration
+            sixStartBtn.isHidden = false
         } else if goalSevenView.isHidden {
             goalSevenView.isHidden = false
             goalSevenLabel.text = "\(goal)"
             goalSevenTimeLabel.text = "\(timeString(time: TimeInterval(seconds)))"
             goalName.text = ""
             goalSevenTime = countDownTimer.countDownDuration
+            sevenStartBtn.isHidden = false
         }
  
        print("\(countDownTimer.countDownDuration)")

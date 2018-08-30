@@ -804,7 +804,7 @@
                                                         </constraints>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="done" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                                                         <variation key="heightClass=regular-widthClass=regular">
                                                             <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                                         </variation>
@@ -961,6 +961,8 @@
                         <outlet property="closeGoalThreeButton" destination="wT3-oZ-ULX" id="Brd-yC-lNa"/>
                         <outlet property="closeGoalTwoButton" destination="uIf-nJ-jYZ" id="amj-Ks-bM5"/>
                         <outlet property="countDownTimer" destination="xaa-A0-yVX" id="0J6-D5-7WI"/>
+                        <outlet property="fiveStartbtn" destination="ZWA-oq-bge" id="Hpf-r9-99F"/>
+                        <outlet property="fourStartBtn" destination="sy4-r9-4uU" id="RgV-vD-Aha"/>
                         <outlet property="goalFiveLabel" destination="Nrb-9V-ROQ" id="vVb-rX-2Uy"/>
                         <outlet property="goalFiveTimeLabel" destination="mls-uI-WEn" id="eFu-Xb-qIf"/>
                         <outlet property="goalFiveView" destination="Bc3-la-l4z" id="GH3-yZ-Lt5"/>
@@ -984,7 +986,12 @@
                         <outlet property="goalTwoTimeLabel" destination="5NM-Um-g2t" id="A4E-PW-Nc2"/>
                         <outlet property="goalTwoView" destination="5RD-KM-aW7" id="Ob9-90-QJa"/>
                         <outlet property="labelOfGoalRunning" destination="vb7-te-NZq" id="Oj3-m6-8IF"/>
+                        <outlet property="oneStartBtn" destination="BzZ-dn-P7Z" id="0t4-ND-FHB"/>
+                        <outlet property="sevenStartBtn" destination="GkU-ei-2r7" id="5ub-zG-Wyt"/>
+                        <outlet property="sixStartBtn" destination="fUg-hh-Mwl" id="i7T-v6-X5C"/>
+                        <outlet property="threeStartBtn" destination="l8Z-8I-t54" id="ZXc-pS-hIX"/>
                         <outlet property="timerLabel" destination="nU2-OJ-lvR" id="YKC-ih-5c0"/>
+                        <outlet property="twoStartBtn" destination="dOm-7E-LZM" id="NSV-8w-0ZS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I3B-Yo-Zkb" userLabel="First Responder" sceneMemberID="firstResponder"/>

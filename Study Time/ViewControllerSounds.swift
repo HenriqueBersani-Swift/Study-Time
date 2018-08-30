@@ -44,13 +44,13 @@ class ViewControllerSounds: UIViewController, UITableViewDelegate, UITableViewDa
             playOutlet.isHidden = true
             
             switch musicLabel.text {
-            case "Forest":
+            case "Forest & River":
                 soundsBackgroundImg.image = #imageLiteral(resourceName: "Forest")
             case "Dark Thrill":
                 soundsBackgroundImg.image = #imageLiteral(resourceName: "darkThrill")
             case "Fireplace":
                 soundsBackgroundImg.image = #imageLiteral(resourceName: "fireplace")
-            case "Hawaii Beach":
+            case "Hawaiian Beach":
                 soundsBackgroundImg.image = #imageLiteral(resourceName: "beach")
             case "College Class":
                 soundsBackgroundImg.image = #imageLiteral(resourceName: "CollegeClass")
