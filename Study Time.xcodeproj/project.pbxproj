@@ -16,6 +16,7 @@
 		6A1AACFD21333C9500EED212 /* Jungle Night.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6A1AACFC21333C9500EED212 /* Jungle Night.wav */; };
 		6A1AACFF21333FDB00EED212 /* Hawaiian Beach.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6A1AACFE21333FDB00EED212 /* Hawaiian Beach.wav */; };
 		6A1AAD03213343A600EED212 /* Pirate Ship.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6A1AAD02213343A500EED212 /* Pirate Ship.wav */; };
+		6ACAA1772138B90400DB5718 /* dingling.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6ACAA1762138B90400DB5718 /* dingling.mp3 */; };
 		6AF0AA61211E297A00A6C502 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF0AA60211E297A00A6C502 /* AppDelegate.swift */; };
 		6AF0AA63211E297A00A6C502 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF0AA62211E297A00A6C502 /* ViewController.swift */; };
 		6AF0AA66211E297A00A6C502 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AF0AA64211E297A00A6C502 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 		6A1AACFC21333C9500EED212 /* Jungle Night.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Jungle Night.wav"; sourceTree = "<group>"; };
 		6A1AACFE21333FDB00EED212 /* Hawaiian Beach.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Hawaiian Beach.wav"; sourceTree = "<group>"; };
 		6A1AAD02213343A500EED212 /* Pirate Ship.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "Pirate Ship.wav"; sourceTree = "<group>"; };
+		6ACAA1762138B90400DB5718 /* dingling.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dingling.mp3; sourceTree = "<group>"; };
 		6AF0AA5D211E297A00A6C502 /* Study Time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Study Time.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AF0AA60211E297A00A6C502 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6AF0AA62211E297A00A6C502 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				6A1AACE6212F722300EED212 /* Dark Thrill.wav */,
 				6A1AACDD212F71FF00EED212 /* Mysterious.wav */,
 				6A1AACFA213339A900EED212 /* Forest & River.wav */,
+				6ACAA1762138B90400DB5718 /* dingling.mp3 */,
 				6A1AACFE21333FDB00EED212 /* Hawaiian Beach.wav */,
 				6A1AACFC21333C9500EED212 /* Jungle Night.wav */,
 				6A1AAD02213343A500EED212 /* Pirate Ship.wav */,
@@ -170,6 +173,7 @@
 				6A1AACE8212F722300EED212 /* Mysterious.wav in Resources */,
 				6AF0AA66211E297A00A6C502 /* Main.storyboard in Resources */,
 				6A1AACFD21333C9500EED212 /* Jungle Night.wav in Resources */,
+				6ACAA1772138B90400DB5718 /* dingling.mp3 in Resources */,
 				6A1AAD03213343A600EED212 /* Pirate Ship.wav in Resources */,
 				6A1AACF92133371800EED212 /* Fireplace.wav in Resources */,
 				6A1AACF1212F722300EED212 /* Dark Thrill.wav in Resources */,

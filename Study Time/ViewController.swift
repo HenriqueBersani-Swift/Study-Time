@@ -20,7 +20,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-
+    var addBtnSound: AVAudioPlayer?
+    
     var goal = ""
   
     // Goal Is On\OFF (Currently running)
@@ -266,6 +267,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if seconds == 0 {
             timer.invalidate()
             
+            let path = Bundle.main.path(forResource: "dingling.mp3", ofType:nil)!
+            let url = URL(fileURLWithPath: path)
+            
+            do {
+                addBtnSound = try AVAudioPlayer(contentsOf: url)
+                addBtnSound?.play()
+            } catch {
+                // couldn't load file :(
+            }
+
         }
     }
     
@@ -291,11 +302,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         return String(format:"%0.2d:%0.2d:%0.2d", hours , minutes , seconds )
     }
+
+    
+    
+  
     
     
     // Add Goals
     @IBAction func addGoal(_ sender: Any) {
 
+        
         goal = goalName.text!
         //runTimer()
         seconds = Int(countDownTimer.countDownDuration)
